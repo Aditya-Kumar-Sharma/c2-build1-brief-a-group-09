@@ -3,7 +3,7 @@
 Growth is about 5% and the gap is mostly in visits per person.
 
 ## 1. Dr Menon's words
-“Show me the part of my business that is short, by how much,and where.”
+"Show me the part of my business that is short, by how much, and where." — Dr Priya Menon, COO, Kalpa Health
 
 ## 2. The question in our words
 
