@@ -18,7 +18,7 @@ The charter is the one page a sponsor signs before work starts. It says what wil
 
 ## 2. The question, in ours
 
-<Two sentences: what she is really asking, and the decision it drives.>
+Dr Menon is asking why test volume in the first half of 2026 grew only about 5 percent against a plan of about 18, and which part of the business is short: how many people we see, how often each comes back, or how many tests each visit carries. The decision it drives is where to act, meaning which city and which lever, or whether the plan itself was set on the wrong assumption.
 
 ## 3. The deliverables
 
