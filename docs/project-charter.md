@@ -13,8 +13,7 @@ The charter is the one page a sponsor signs before work starts. It says what wil
 | Charter committed on | <date> |
 
 ## 1. The question, in the sponsor's words
-
-> <paste the quote>
+Show me the part of my business that is short, by how much, and where. — Dr Priya Menon, COO, Kalpa Health
 
 ## 2. The question, in ours
 
