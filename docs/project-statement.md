@@ -1,10 +1,9 @@
-# Project statement · Brief <LETTER> · Group <N>
-
-Written in Scope, before the data is opened. Updated when the data proves a line wrong, with the old line struck through rather than deleted, so the panel can see what you learned.
+# Project statement · Brief A · Group 9
+#Written in Scope, before the data is opened. Updated when the data proves a line wrong, with the old line struck through rather than deleted, so the panel can see what you learned.
+Growth is about 5% and the gap is mostly in visits per person.
 
 ## 1. Dr Menon's words
-
-> <Paste the quote from the brief.>
+“Show me the part of my business that is short, by how much,and where.”
 
 ## 2. The question in our words
 
