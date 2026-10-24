@@ -89,4 +89,3 @@ Dr Menon is asking why test volume in the first half of 2026 grew only about 5 p
 | Date | What changed | Why | Who |
 |---|---|---|---|
 | 24/10/2026 | D2 now reads notebooks 01 to 03 (was 01 to 06) | The analysis is built in three notebooks: load and clean bookings, load and clean patients, analyse | Group 9 |
-| 24/10/2026 | AI tools may now be used as a learning aid; every significant use is logged in docs/ai-log.md | Instructor's updated guidance; this replaces the earlier restriction | Group 9 |
