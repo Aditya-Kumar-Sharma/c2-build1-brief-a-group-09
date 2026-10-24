@@ -7,7 +7,7 @@ Growth is about 5% and the gap is mostly in visits per person.
 
 ## 2. The question in our words
 
-<Two or three sentences. What is she really asking, what decision does the answer drive, and what would she do differently depending on the answer? If both answers lead to the same action, say so: it means the question is not yet the right one.>
+Test volume +5.0% vs plan +18.4% → because people +3.8%, visits per person −1.0%, tests per visit +2.2% do not add up to 18 → because the plan was set per city on last year's mix and never split by branch or channel → because the dashboard shows one monthly number → because the board asked for one number → nobody asked what it would drive.
 
 ## 3. The question she did not ask
 
