@@ -1,3 +1,6 @@
 # data/clean
 
-What the notebooks write. Every file here is reproducible from data/raw by running the notebooks in order from a fresh kernel. If a file here cannot be regenerated, delete it.
+Both are ZIP files containing booking and patient data.
+
+Bookings — contains data from both Nova and Legacy systems
+Patients — duplicate patient records have been removed; this is the deduplicated version
