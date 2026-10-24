@@ -1,23 +1,26 @@
-# Approach log · Brief <LETTER> · Group <N>
+# Approach log · Brief A · Group [N]
 
 One row per part of the work. At least two approaches in every row. Written when the choice is made, not afterwards; the commit timestamp is the proof. An approach you tried for twenty minutes and abandoned is the best kind of row. Keep the dead notebook cell and link to it.
 
 The panel reads this file before it reads your notebooks. A panellist will cover the "chosen" column and ask you to choose again, aloud.
 
+> DRAFT NOTE (delete before commit): this draft was prepared from the notebook outputs. Every row must say what the group really weighed. Edit each row to match, fill Owner and Date, and link dead cells where they exist. Cells marked [VERIFY] are inferences, not facts from the notebook.
+
 | # | Part of the work | Approaches considered (two at least) | Chosen | Why this, and not the others | What would have changed the choice | What happened when we tried it | Owner | Date |
 |---|---|---|---|---|---|---|---|---|
-| 0 | *Example: matching invoice ids to payment references* | *(a) Strip the prefix and match on digits. (b) Match on amount and date within two days. (c) Both, and keep the rows where they disagree.* | *(c)* | *(a) alone matched 91 percent and silently paired two invoices with one payment. (b) alone could not separate same-day same-amount visits. Together they flag what each misses.* | *A shared id in both feeds would have made (a) enough.* | *96 percent matched. The 4 percent became finance's list.* | *example* | *example* |
-| 1 | Which table to count tests from | | | | | | | |
-| 2 | How to define the period (first half, both years) | | | | | | | |
-| 3 | Profiling: what to check in each table | | | | | | | |
-| 4 | Duplicates: the identity rule | | | | | | | |
-| 5 | Missing values: drop, default, or keep and flag | | | | | | | |
-| 6 | Each join: type, key, validation | | | | | | | |
-| 7 | The method (tree / ladder / bridge / shuffle / comparison) | | | | | | | |
-| 8 | The segmentation (city, channel, type) | | | | | | | |
-| 9 | The chart that carries the claim | | | | | | | |
-| 10 | The one sentence | | | | | | | |
+| 1 | Which table to count tests from | (a) booking-test rows from bookings. (b) result rows from the results files. (c) collection status from the collections app (collected only, or collected plus no-show). | (a) | The plan is 1.16 to 1.20 times last year's booking-row count in every city and month, so the plan was set on this basis. Results cover only tests actually run (81.6% of booking rows in both halves), so they drop no-shows and cancellations the plan counted. [VERIFY: the rule A/B/C comparison cell crashed; add its output] | A plan restated on tests run, or finance defining volume as collected samples | Bookings give +5.01% (457,230 vs 435,430). Results give +4.98%, a 0.03-point difference. | [FILL] | [FILL] |
+| 2 | How to define the period (first half, both years) | (a) slot_at (the appointment date) between 1 Jan and 30 Jun. (b) created_at (the booking date) in the same window. | (a) [VERIFY] | A test belongs to the period when the slot happens; created_at would move bookings made in late June for July slots, or December bookings for January slots, into the wrong half. | A plan defined on booking date | H1 2025 435,430 and H1 2026 457,230 tests; +5.0% matches Dr Menon's figure (T1). | [FILL] | [FILL] |
+| 3 | Profiling: what to check in each table | (a) Row counts and null rates only. (b) Also id formats, date ranges, duplicate rows and mixed-type columns. | (b) | A join on unprofiled ids would hide format and duplicate problems; (a) would not have found them. | A single, already-clean source | Found 1,289 rows with a blank test code but a valid price; a mixed-type column (DtypeWarning on import); exact duplicate collection rows ("double scans"); 6 cities with Bangalore spelled differently in the plan. | [FILL] | [FILL] |
+| 4 | Identity: when two patient ids are the same person | (a) Count distinct patient ids. (b) Merge ids that share a valid phone and the same name. (c) Merge on name alone. | (b) | (a) counts one person several times. (c) is unsafe: the most common name (NISHA GUPTA) sits on 586 ids. | A national id or a date-of-birth conflict inside merged groups | 309,217 ids became 303,153 people (6,064 merged, 2.0%). No merged group had two dates of birth. People counts for H1 2025 (94,477) and H1 2026 (98,025) were identical under (a) and (b). | [FILL] | [FILL] |
+| 5 | Missing values: drop, default, or keep and flag | (a) Drop rows with a blank test code. (b) Fill the code from the price. (c) Keep and flag. | (c) | The price is valid and the plan counted these rows, so (a) would understate the test count. (b) is wrong for many rows: of the blank-code rows, 822 map to exactly one code by price but 467 map to several. | A reason to think blank codes mean no test was done | 1,289 rows flagged and kept; headline unchanged. | [FILL] | [FILL] |
+| 6 | Duplicates in collections | (a) Drop exact duplicate rows, then keep one row per booking_id. (b) Keep all rows and aggregate to one status per booking. | (a) [VERIFY] | Double scans are exact duplicate rows, so (a) removes them without choosing between conflicting statuses. | Duplicates with different statuses | [FILL: rows before and after from the cell output] | [FILL] | [FILL] |
+| 7 | Each join: type, key, validation | (a) INNER join. (b) LEFT join with validate and a row-count assert. | (b) | A LEFT join keeps unmatched bookings visible; INNER would silently drop them. The assert catches a join that multiplies rows. | None found | Row count unchanged after the collections join and the person_id join (1,309,199); plan joined with a row-count assert on 36 city-months. [VERIFY collections join output] | [FILL] | [FILL] |
+| 8 | The method | (a) Patients × tests. (b) Patients × visits per patient × tests per visit, with a log split so branch points add up. | (b) | The middle branch separates fewer people from the same people coming less often, which need different fixes. | A business where visits are not the unit | Branches multiply back (1.0376 × 0.9903 × 1.0220 = 1.0501). People +3.8%, visits per person −1.0%, tests per visit +2.2%. | [FILL] | [FILL] |
+| 9 | The segmentation (city, channel, type) | (a) City first. (b) Channel first. (c) Booking source (app, phone, walk-in). | (b), then city within channel | City first puts 44% of the gap in Chennai and Bengaluru but hides that the clinic channel is short in every city. Source (app, phone, walk-in) grows 4.6% to 5.4% in each source, so it does not locate the gap. | A plan with a channel split | Clinic −11.9%, home +37.5%; clinic −20.0 points and home +6.5 points of the gap (plan spread over channels by last year's mix, an assumption). | [FILL] | [FILL] |
+| 10 | The chart that carries the claim | (a) Growth by city against plan (one bar per city). (b) Clinic and home growth by city. | (b) | It shows the claim, clinic down and home up in every city, which (a) does not. | A claim about cities rather than channels | Clinic ranges −6.0% to −24.8%; home +15.9% to +42.8% across the six cities. | [FILL] | [FILL] |
+| 11 | The one sentence | (a) The auto-drafted sentence (cities and weakest branch). (b) A channel-led sentence with the gap in points above and below plan. | (b) | The auto-draft names Chennai and Bengaluru and says visits per person is weakest; that misses where the gap sits. | The switch test showing clinic loss is mostly movement to home | See slide 4. | [FILL] | [FILL] |
 
 ## Parts we never had to choose about
 
-<List any part where only one approach was possible, and say why. The panel will ask whether that was true.>
+- Plan city spelling: only one mapping was possible (Bangalore to Bengaluru, to match the bookings).
+- [FILL: add anything else where only one approach was possible, and say why. The panel will ask whether that was true.]
