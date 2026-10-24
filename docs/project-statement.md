@@ -58,7 +58,7 @@ Growth is about 5% and the gap is mostly in visits per person.
 | # | Constraint |
 |---|---|
 | C1 | Free tools covered so far: notebooks in VS Code on Codespaces, SQL, Excel, GitHub. |
-| C2 | ~~No coding or chat assistants on the analysis, the notebooks or the write-ups.~~ Updated on the instructor's new guidance ([FILL date]): AI tools may be used as a learning aid; every significant use is logged in docs/ai-log.md and every member must be able to explain every part. |
+| C2 | No coding or chat assistants on the analysis, the notebooks or the write-ups. |
 | C3 | The data as released; three to four working days; a group of three or four. |
 | C4 | The plan has no channel split, so any gap by channel assumes last year's mix. |
 
