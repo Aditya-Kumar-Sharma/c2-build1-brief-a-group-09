@@ -4,12 +4,6 @@ Numbered in run order. Clear outputs before every commit. One owner per notebook
 
 | Notebook | Produces | Depends on | Teaches |
 |---|---|---|---|
-| 01_profile | profile_files.csv, profile_columns.csv | the pack | Encoding, dtypes, categoricals, id audits, the grain trap |
-| 02_load_parallel_validate | bookings_all, bookings, rejects_bookings | 01 | Process pools against threads, pydantic contracts, fast grouping without apply |
-| 03_clean_reconcile | the five clean tables | 02 | Identity rules, pd.NA traps, merge validate and indicator, person de-duplication, two id families |
-| 04_sql_transformations | kalpa.sqlite or your PostgreSQL | 03 | Logical query order, CTEs, window functions, anti-joins, EXPLAIN and indexes |
-| 05_methods | the numbers behind the claim, slide4_chart.png | 03 | Log decomposition, the ladder, the bridge, the hypergeometric shuffle, the fair comparison |
-| 06_answer_cold_run | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
-| 07_load_clean_booking | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
-| 08_laod_clean_patients | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
-Copy `00_template.ipynb` for anything you add.
+| 01_load_clean_booking | Merges the booking data and clean the booking data and creates one booking table | 06, 01 | 1,308,732 rows and dropped 2,442 rows where created_at was after slot_at (bad data) |
+| 02_laod_clean_patients | Loads the patients data and cleans it  | 06, 01 | 303,153 distinct people and normalized phone + normalized name + DOB |
+
