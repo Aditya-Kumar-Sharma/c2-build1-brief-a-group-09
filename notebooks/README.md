@@ -10,5 +10,6 @@ Numbered in run order. Clear outputs before every commit. One owner per notebook
 | 04_sql_transformations | kalpa.sqlite or your PostgreSQL | 03 | Logical query order, CTEs, window functions, anti-joins, EXPLAIN and indexes |
 | 05_methods | the numbers behind the claim, slide4_chart.png | 03 | Log decomposition, the ladder, the bridge, the hypergeometric shuffle, the fair comparison |
 | 06_answer_cold_run | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
-
+| 07_load_clean_booking | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
+| 08_laod_clean_patients | board_number.xlsx, the headline in the last cell | 03, 05 | Idempotency, the cold run, the one number with its denominator |
 Copy `00_template.ipynb` for anything you add.
