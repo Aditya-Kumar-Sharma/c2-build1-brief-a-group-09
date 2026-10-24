@@ -28,7 +28,7 @@ Test volume grew 5.0% in H1 2026 against H1 2025 (457,230 vs 435,430 tests, six 
 
 | What | Where |
 |---|---|
-| Video | |
+| Video |'https://drive.google.com/drive/folders/18USWeLsqdSYJhHmWHgWXddrwnMJKKGpN' |
 | Slides | `slides/` |
 | Task board | |
 | Data pack provenance | `data/raw/README.md` |
