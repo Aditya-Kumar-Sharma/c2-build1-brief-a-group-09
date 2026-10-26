@@ -129,7 +129,7 @@ Aditya Kr Sharma	The tree, city and channel split, new vs returning patients, ch
 Links
 What	Where
 Video	Group 09 video folder (viewable by anyone with the link)
-Slides	slides/
+Slides	slides/Brief-A_Final_dec
 Data pack provenance	data/raw/README.md
 
 The logs
