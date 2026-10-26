@@ -146,8 +146,7 @@ c2-build1-brief-a-group-09/
 | What | Where |
 |---|---|
 | Video | [Group 09 video folder](https://drive.google.com/drive/folders/18USWeLsqdSYJhHmWHgWXddrwnMJKKGpN) (viewable by anyone with the link) |
-| Slides | `slides/` |
-| Task board | [FILL: link to the GitHub Issues or Projects board] |
+| Slides | `slides/Brief_A_Final_Deck(1).pptx` |
 | Data pack provenance | `data/raw/README.md` |
 
 ## The logs
